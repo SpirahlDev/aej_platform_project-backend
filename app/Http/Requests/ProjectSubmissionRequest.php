@@ -42,7 +42,7 @@ class ProjectSubmissionRequest extends FormRequest
 
             // Documents requis
             'id_card_file' => 'required|file|mimes:pdf,jpg,jpeg,png|max:5120', // 5MB max
-            'identity_document' => 'required|file|mimes:pdf,jpg,jpeg,png|max:5120', // 5MB max
+            'identity_document' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120', // 5MB max
             'business_plan' => 'required|file|mimes:pdf,doc,docx|max:10240', // 10MB max
         ];
     }

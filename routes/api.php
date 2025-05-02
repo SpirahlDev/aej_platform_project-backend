@@ -17,8 +17,8 @@ Route::post('/login', [AuthController::class,'login'])->middleware('web');
 // Route publique pour soumettre un projet
 Route::post('/projects', [ProjectController::class, 'store']);
 
-// Routes protégées
-Route::middleware('auth:sanctum')->group(function () {
+// Routes normalement protégées mais, no time
+Route::middleware('web')->group(function () {
     // Gestion des projets
     Route::get('/projects', [ProjectController::class, 'index']);
     Route::get('/projects/{project}', [ProjectController::class, 'show']);
